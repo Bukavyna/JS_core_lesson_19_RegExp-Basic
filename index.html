@@ -3,8 +3,63 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Title</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+
+<!------Форма---->
+
+<form>
+	<h2>Please sign up</h2>
+	<div class="input__block">
+	<input type="text" id="first_name" class="input" placeholder="First name">
+	<div class="modal__box none">Please provide a valid First. name.</div>
+	<p class="input-x none">X</p>
+	<p class="input-ok none">✔</p>
+	</div>
+	<div class="input__block">
+	<input type="text" id="last_name" class="input" placeholder="Last name">
+	<div class="modal__box none">Please provide a valid Last name.</div>
+	<p class="input-x none">X</p>
+	<p class="input-ok none">✔</p>
+	</div>
+	<div class="input__block">
+	<input type="text" name="emile" class="input" id="email" placeholder="Email address">
+	<div class="modal__box none">Please provide a valid Email address.</div>
+	<p class="input-x none">X</p>
+	<p class="input-ok none">✔</p>
+	</div>
+	<div class="input__block">
+	<input type="password" id="pass" class="input" placeholder="Password">
+	<div class="modal__box none">Please provide a valid Password.</div>
+	<p class="input-x none">X</p>
+	<p class="input-ok none">✔</p>
+	</div>
+	<div class="box">
+		<input type="checkbox" id="check">
+		<label for="check">I agree with Privacy Police</label>
+	</div>
+	<input type="button" id="sign" value="Sign Up">
+</form>
+
+
+<!------Модальне вікно----->
+
+<div class="modal-block none">
+	<div class="modal-block__top">
+		<div class="clock">
+			<div class="minute-hand"></div>
+			<div class="hour-hand"></div>
+		</div>
+	</div>
+
+	<div class="modal-block__bottom">
+		<h2>Great!</h2>
+		<p>Your account has been created successfully.</p>
+		<button id="modal-bnt">Start Exploring<span>➔</span></button>
+	</div>
+</div>
 
   <script src="script.js"></script>
 
