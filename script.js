@@ -18,7 +18,8 @@ document.forms[0].addEventListener('input', () => {
   if (testFirst && testLast && testEmail && testPass && check.checked) {
     signButton.disabled = false;
     signButton.style.backgroundColor = '#0076FF';
-  } else {
+  }
+  else {
     signButton.disabled = true;
     signButton.style.backgroundColor = '#4DA2FB';
   }
@@ -102,13 +103,50 @@ signButton.addEventListener('click', () => {
 //---Початок функції---
 
 let modalBnt = getId('modal-bnt');
-
 modalBnt.addEventListener('click', () => {
+
+  for (let i = 0; i < inputOk.length; i++) {
+    inputOk[i].style.display = 'none';
+  }
+
+  for (let i = 0; i < input.length; i++) {
+    input[i].style.border = 'none';
+  }
+
   modalBlock.style.display = 'none';
   document.body.style.backgroundColor = '';
   signButton.disabled = true;
   signButton.style.backgroundColor = '#4DA2FB';
   document.forms[0].reset();
-  location.reload();
+  // location.reload();
 });
 //---Кінець функції---Закривання модального вікна, повернення до форми.
+
+
+
+
+//         // Отримати всі елементи форми
+//           const myForm = document.forms[0];
+
+//          const formElements = myForm.elements;
+//          // Пройтися по всіх елементах форми та очистити їх значення
+
+//           for (let i = 0; i < myForm.length; i++) {
+
+//             const element = myForm[i];
+
+//          // Перевірити, чи елемент - поле вводу, чекбокс, радіокнопка та ін.
+
+//             if (element.tagName === 'INPUT' || element.tagName === 'CHECKBOX'|| element.tagName === 'SELECT' || element.type === 'radio) {
+
+//          // Якщо це текстове поле, текстова область або селект, очистити значення
+
+//               element.value = '';
+//             }
+//             else if (element.tagName === 'INPUT' && element.type === 'checkbox') {
+
+//          // Якщо це чекбокс або радіокнопка, зняти позначку (унікально для випадкових виборів)
+
+//               element.checked = false;
+//             }
+//           }
